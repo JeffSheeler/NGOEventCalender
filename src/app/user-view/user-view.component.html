@@ -1,0 +1,6 @@
+<p>user-view works!</p>
+
+<div *ngFor="let e of event" align="justify">
+    <div align ="center"><img [src]="e.eventImage" (click)="onSelect(e._id)"></div>
+    <div align ="center">Location: {{e.location}}</div>
+    </div>

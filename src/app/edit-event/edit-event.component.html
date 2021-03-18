@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <h2>Edit Event Info</h2>
+    
+    <form [formGroup]="eventEditForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Name: </label>
+          <input type="text" formControlName="name" class="form-group"><br>
+          <label>Description: </label>
+          <input type="text" formControlName="description" class="form-group"><br>
+          <label>Category: </label>
+          <input type="text" formControlName="category" class="form-group"><br>
+          <label>Location: </label>
+          <input type="text" formControlName="location" class="form-group"><br>
+          <label>Start Date: </label>
+          <input type="date" formControlName="startDate" class="form-group"><br>
+          <label>End Date: </label>
+          <input type="date" formControlName="endDate" class="form-group"><br>
+          <label>Start Time: </label>
+          <input type="date" formControlName="startTime" class="form-group"><br>
+          <label>End Time: </label>
+          <input type="date" formControlName="endTime" class="form-group"><br>
+          <label>Allow Registration: </label>
+          <input type="checkbox" formControlName="allowRegistration" class="form-group"><br>
+          <label>Event Image: </label>
+          <input type="text" formControlName="eventImage" class="form-group"><br>
+          <label>Adult Tickets: </label>
+          <input type="number" formControlName="adultTicket" class="form-group"><br>
+          <label>Child Tickets: </label>
+          <input type="number" formControlName="childTicket" class="form-group"><br>
+        </div>
+    
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <div>
+            <button (click)="goToEvents()">Back</button>
+        </div>
+    </form>
+    {{eventEditForm.value | json}}
+    </div>

@@ -1,0 +1,28 @@
+<p>event-management works!</p>
+
+<p>
+    <button [routerLink]="['/adminView/addEvent']" class="btn btn-primary">Add New Event</button>
+</p>
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th>Event</th>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let e of event">
+    <td>{{e.name}}</td>
+    <td>{{e.description}}</td>
+    <td>{{e.location}}</td>
+    <td>{{e.startDate | date:'longDate'}}</td>
+    <td>{{e.endDate | date:'longDate'}}</td>
+    <button [routerLink]="['../editEvent', e._id]" class="btn btn-primary">Edit</button>
+    <button (click)='deleteOnClick(event)' class="btn btn-primary">Delete</button>
+  </tr>
+</tbody>
+</table>

@@ -1,0 +1,15 @@
+input, label{
+    width:100%;
+    box-sizing: border-box;
+}
+
+input{
+    font-size: 25px;
+}
+
+div{
+    padding-left: 20%;
+    padding-right: 20%;
+    margin: auto;
+}
+
